@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+
+def usage
+  puts "tinypng input.png output.png"
+end
+
+input = ARGV[0]
+output = ARGV[1]
+
+unless input && output
+  usage
+  exit 1
+end
+
+$LOAD_PATH << File.expand_path(File.join(__FILE__, '../../lib'))
+require 'tinypng'
+
+client = TinyPNG::Client.new
+begin
+  image = client.shrink(File.open(input) { |file| file.read })
+rescue TinyPNG::Exception => e
+  puts e
+  exit 1
+end
+
+require 'fileutils'
+FileUtils.cp(image.to_file, output)
