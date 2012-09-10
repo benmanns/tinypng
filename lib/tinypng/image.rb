@@ -18,7 +18,13 @@ module TinyPNG
 
     def to_file
       Tempfile.new(['tinypng', '.png']).tap do |file|
-        file.write TinyPNG::Client.get(output['url'])
+        begin
+          image_response = TinyPNG::Client.get(output['url'])
+        rescue => e
+          raise Exception.new("Network error: #{e}")
+        end
+
+        file.write image_response
         file.rewind
       end
     end
