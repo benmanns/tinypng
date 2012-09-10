@@ -1,5 +1,5 @@
 require "tinypng/version"
+require 'tinypng/client'
 
 module TinyPNG
-  # Your code goes here...
 end
