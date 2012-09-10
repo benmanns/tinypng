@@ -1,6 +1,6 @@
 # TinyPNG
 
-TODO: Write a gem description
+TinyPNG is a simple API client for TinyPNG.org, which compresses your PNG images by 50-70% while preserving full transparency.
 
 ## Installation
 
@@ -18,7 +18,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Use the Ruby API in your programs:
+
+    require 'tinypng'
+    image_file = File.open(image_file_name)
+    client = TinyPNG::Client.new
+	image = client.shrink(image_file.read)
+	image.input # => {"size"=>1234}
+	image.output # => {"depth"=>8, "size"=>567, "ratio"=>0.459, "url"=>"http://tinypng.org/api/shrink/out/example.png"}
+	image.to_file # => #<File:/tmp/tinypng20120910-5552-aturxh.png>
+
+Or use the command line to shrink your images:
+
+    tinypng mybigimage.png myshrunkenimage.png
 
 ## Contributing
 

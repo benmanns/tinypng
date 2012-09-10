@@ -8,9 +8,9 @@ Gem::Specification.new do |gem|
   gem.version       = TinyPNG::VERSION
   gem.authors       = ["Benjamin Manns"]
   gem.email         = ["benmanns@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.description   = %q{Simple API client for TinyPNG.org.}
+  gem.summary       = %q{TinyPNG is a simple API client for TinyPNG.org, which compresses your PNG images by 50-70% while preserving full transparency.}
+  gem.homepage      = 'http://github.com/benmanns/tinypng'
 
   gem.add_dependency 'httparty'
 
