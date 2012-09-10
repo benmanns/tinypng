@@ -1,5 +1,5 @@
 require "tinypng/version"
 
-module Tinypng
+module TinyPNG
   # Your code goes here...
 end

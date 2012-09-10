@@ -1,4 +1,4 @@
-# Tinypng
+# TinyPNG
 
 TODO: Write a gem description
 
