@@ -18,11 +18,13 @@ Or install it yourself as:
 
 ## Usage
 
+Configure the TinyPNG client with your API key. You can set the TINY_PNG_KEY environment variable (helpful for [production configuration](http://12factor.net/config) or command-line usage) or specify the API key when creating each instance of `TinyPNG::Client`. Setting the key on instance initialization will override the global environment variable.
+
 Use the Ruby API in your programs:
 
     require 'tinypng'
     image_file = File.open(image_file_name)
-    client = TinyPNG::Client.new
+    client = TinyPNG::Client.new('YOUR_TINY_PNG_API_KEY')
 	image = client.shrink(image_file.read)
 	image.input # => {"size"=>1234}
 	image.output # => {"depth"=>8, "size"=>567, "ratio"=>0.459, "url"=>"http://tinypng.org/api/shrink/out/example.png"}
@@ -30,7 +32,7 @@ Use the Ruby API in your programs:
 
 Or use the command line to shrink your images:
 
-    tinypng mybigimage.png myshrunkenimage.png
+    TINY_PNG_KEY=YOUR_TINY_PNG_API_KEY tinypng mybigimage.png myshrunkenimage.png
 
 ## Contributing
 
