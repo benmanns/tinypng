@@ -2,6 +2,8 @@
 
 TinyPNG is a simple API client for TinyPNG.org, which compresses your PNG images by 50-70% while preserving full transparency.
 
+This gem was initially created by reverse engineering the [TinyPNG](http://tinypng.org/) website. Since then, TinyPNG has begun developing an [Official API](https://gist.github.com/savage69kr/6ecd0c98f8de7882b4f6) which is in alpha stages. In the future, an API key will be required to use the TinyPNG API and gem.
+
 ## Installation
 
 Add this line to your application's Gemfile:
