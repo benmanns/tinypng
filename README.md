@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-Configure the TinyPNG client with your API key. You can set the TINY_PNG_KEY environment variable (helpful for [production configuration](http://12factor.net/config) or command-line usage) or specify the API key when creating each instance of `TinyPNG::Client`. Setting the key on instance initialization will override the global environment variable.
+Configure the TinyPNG client with your API key. You can set the `TINY_PNG_KEY` environment variable (helpful for [production configuration](http://12factor.net/config) or command-line usage) or specify the API key when creating each instance of `TinyPNG::Client`. Setting the key on instance initialization will override the global environment variable.
 
 Use the Ruby API in your programs:
 
